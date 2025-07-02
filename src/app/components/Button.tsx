@@ -1,12 +1,18 @@
+'use client';
+
+import React from "react";
+
 interface ButtonProps {
   text: string;
-  color: string;
+  color?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit" |"reset";
 }
   
   
-const Button = ({text, color} : ButtonProps) => {
+const Button = ({text, color, onClick, type} : ButtonProps) => {
   return (
-    <button style={{backgroundColor: color}}>{text}</button>
+    <button style={{backgroundColor: color}} type={type} onClick={onClick}>{text}</button>
   )
 }
 
