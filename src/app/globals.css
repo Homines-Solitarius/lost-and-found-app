@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body{
+  cursor: url('/public/cursor.png')
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
