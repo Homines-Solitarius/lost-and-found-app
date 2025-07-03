@@ -4,15 +4,18 @@ import Link from "next/link"
 
 const Header = () => {
   return (
-      <div className="header">
-        <div style={{ display: "flex", alignItems: "center", flexDirection: "row", gap: "10px" }}>
-          <FaLock/>
-          <span style={{color: 'white', fontWeight: "600"}}>Fpe Recover</span>
+      <div className="flex p-8 items-center justify-between bg-sky-500">
+        <div className="flex flex-row items-center gap-2">
+          <FaLock color="white" />
+          <span className="text-xl font-bold text-white">Fpe Recover</span>
         </div>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/report_item">Report Lost Item</Link>
-          <Link href="/">Contact</Link>
+        <nav className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 p-4 bg-white shadow-md">
+          <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium text-base">
+            Home
+          </Link>
+          <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium text-base">
+            About
+          </Link>
         </nav>
     </div>
   )
