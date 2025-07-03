@@ -1,28 +1,52 @@
-import { FaLock } from "react-icons/fa6"
-import "../globals.css"
-import Link from "next/link"
+'use client';
 
-const Header = () => {
+import { useState } from 'react';
+import Link from 'next/link';
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Report Lost Item', href: '/report_item' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Product', href: '#' },
+    { name: 'Features', href: '#' },
+    { name: 'Marketplace', href: '#' },
+    { name: 'Company', href: '#' },
   ]
-  return (
-    <div className="flex px-20 items-center justify-between bg-blue-700">
-      <div className="flex flex-row items-center gap-2 ">
-        <FaLock color="white" />
-        <span className="text-xl font-bold text-white">Fpe Recover</span>
-      </div>
-      <nav className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 p-4">
-        {navigation.map((item) => (
-          <Link key={item.name} href={item.href} className="text-white rounded-lg hover:bg-white hover:text-blue-700 font-bold text-md p-2 transition-all duration-500 ease-out">
-            {item.name}
-          </Link>
-        ))}
-      </nav>
-    </div>
-  )
-}
 
-export default Header
+  return (
+    <header className="bg-blue-700 shadow-md p-4">
+      <div className="flex justify-between items-center">
+        <h1 className="text-xl font-bold text-white">FPE Recover</h1>
+
+        {/* Hamburger button - shown on mobile only */}
+        <button
+          className="sm:hidden text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        {/* Desktop nav - always visible on sm+ */}
+        <nav className="hidden sm:flex gap-6">
+          {navigation.map((item) => (
+            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
+
+      {/* Mobile nav - toggles on hamburger click */}
+      {isOpen && (
+        <nav className="flex flex-col gap-2 mt-4 sm:hidden">
+          {navigation.map((item) => (
+            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
+  );
+}
