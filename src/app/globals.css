@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
-body{
-  cursor: url('/public/cursor.png')
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
 body {
-  background: var(--background);
+  cursor: url('/public/cursor.png');
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: 'Poppins', sans-serif;
 }
