@@ -17,7 +17,7 @@ const Home = () => {
           <Link href='/login' className='bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded'>
             <Button text="Login"/>
           </Link>
-          <Link href='/login' className='bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded'>
+          <Link href='/register' className='bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded'>
             <Button text="Register"/>
           </Link>
         </div>
