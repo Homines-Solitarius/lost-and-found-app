@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FaHamburger } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -23,7 +24,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
         >
-          ☰
+          <FaHamburger className='text-white'/>
         </button>
 
         {/* Desktop nav - always visible on sm+ */}
@@ -42,7 +43,7 @@ export default function Navbar() {
           }`}>
           <nav className="flex flex-col gap-2 mt-4 sm:hidden transition-all duration-300 ease-in-out">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-200 hover:text-white">
                 {item.name}
               </Link>
             ))}
