@@ -11,11 +11,8 @@ const RegisterForm = () => {
     const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // Prevents
 
-        const storedMatric = 'CS20230200712';
-        const storedPassword = '123456'
-
         //
-        if (matricNumber == storedMatric && password == storedPassword) {
+        if (matricNumber != '' && password != '') {
             console.log("Login Successful");
         } else {
             alert('Invalid Credentials...')
