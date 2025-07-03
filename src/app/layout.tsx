@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white transition-all duration-500 ease-out overflow-x-hidden">
+      <body className="bg-white transition-all duration-500 ease-out overflow-x-hidden py-40">
         <Header />
         {children}
         <Footer />

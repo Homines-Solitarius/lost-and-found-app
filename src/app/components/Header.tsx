@@ -7,14 +7,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Home', href: '#' },
+    { name: 'Report Lost Item', href: '#' },
+    { name: 'Contact Us', href: '#' },
   ]
 
   return (
-    <header className="bg-blue-700 shadow-md p-4">
+    <header className="bg-blue-700 shadow-md px-20 py-4 absolute top-0 left-0 w-full z-50">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">FPE Recover</h1>
 
@@ -30,7 +29,7 @@ export default function Navbar() {
         {/* Desktop nav - always visible on sm+ */}
         <nav className="hidden sm:flex gap-6">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold px-6 py-2 rounded-md text-gray-900 hover:text-blue-700 hover:bg-white transition-colors duration-200">
               {item.name}
             </Link>
           ))}
@@ -41,7 +40,7 @@ export default function Navbar() {
       {isOpen && (
         <div className={`overflow-hidden transition-all duration-300 ease-in-out sm:hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
           }`}>
-          <nav className="flex flex-col gap-2 mt-4 sm:hidden">
+          <nav className="flex flex-col gap-2 mt-4 sm:hidden transition-all duration-300 ease-in-out">
             {navigation.map((item) => (
               <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
                 {item.name}
