@@ -1,7 +1,7 @@
 'use client';
 
-import React, {useState} from 'react'
-import Button from './Button'
+import React, { useState } from 'react'
+import { FaUserCircle } from 'react-icons/fa';
 
 const LoginForm = () => {
     const [matricNumber, setMatricNumber] = useState('');
@@ -23,14 +23,15 @@ const LoginForm = () => {
         }
     }
   return (
-    <div className="flex-center">
-          <form style={{ marginBlock: "30px" }} onSubmit={handleForm}>
-              <h3 style={{fontSize: 24, fontWeight: 600, marginBottom: 20, textAlign: 'center'}}>Login to continue.</h3>
+    <div className="p-5 m-auto">
+        <h3 className='text-xl font-bold text-center m-4'>Welcome back you&apos;ve been missed.</h3>
+          <form onSubmit={handleForm} className='relative bg-gray-100 p-4 rounded max-w-80'>
+              <FaUserCircle size={60} className='mx-auto my-4'/>
             <label htmlFor="Title">Matric Number</label>
-            <input type="text" name="userMatric" id="userMatric" value={matricNumber} onChange={(e) => setMatricNumber(e.target.value)}/>
+            <input type="text" className='border-2 border-gray-200 my-1 p-1 w-full rounded-md' name="userMatric" id="userMatric" value={matricNumber} onChange={(e) => setMatricNumber(e.target.value)}/>
             <label htmlFor="Title">Password</label>
-            <input type="password" name="userPassword" id="userPassword" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <Button text='Login' type="submit"/>
+              <input type="password" className='border-2 border-gray-200 my-1 p-1 w-full rounded-md' name="userPassword" id="userPassword" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <button type="submit" className='bg-blue-700 p-2 my-3 text-white font-medium w-full rounded-md'>Login</button>
         </form>
    </div>
   )
