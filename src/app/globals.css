@@ -11,3 +11,27 @@ body {
   background: var(--background);
   font-family: 'Poppins', sans-serif;
 }
+
+input,
+textarea{
+  width: 100%;
+  outline: 0;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  border-color: blue;
+}
+
+label {
+  display: block;
+}
+
+#report_photo {
+  width: auto;
+  cursor: url(/public/cursor.png);
+}
+
+img {
+  object-fit: cover;
+}
