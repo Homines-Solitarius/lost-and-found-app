@@ -9,7 +9,7 @@ export default function Navbar() {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Report Lost Item', href: '#' },
+    { name: 'Report Lost Item', href: '/report_item' },
     { name: 'Contact Us', href: '#' },
   ]
 
@@ -20,7 +20,7 @@ export default function Navbar() {
 
         {/* Hamburger button - shown on mobile only */}
         <button
-          className="sm:hidden text-2xl"
+          className="sm:hidden text-2xl outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
         >
@@ -30,7 +30,7 @@ export default function Navbar() {
         {/* Desktop nav - always visible on sm+ */}
         <nav className="hidden sm:flex gap-6">
           {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold px-6 py-2 rounded-md text-gray-900 hover:text-blue-700 hover:bg-white transition-colors duration-200">
+            <Link key={item.name} href={item.href} className="text-md font-semibold px-6 py-2 rounded-md text-white hover:text-blue-700 hover:bg-white transition-colors duration-200">
               {item.name}
             </Link>
           ))}
