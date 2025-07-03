@@ -7,13 +7,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Report Lost Item', href: '#' },
     { name: 'Contact Us', href: '#' },
   ]
 
   return (
-    <header className="bg-blue-700 shadow-md px-20 py-4 absolute top-0 left-0 w-full z-50">
+    <header className="bg-blue-700 shadow-md sm:px-10 md:px-20 lg:px-40 px-6 py-4">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">FPE Recover</h1>
 
