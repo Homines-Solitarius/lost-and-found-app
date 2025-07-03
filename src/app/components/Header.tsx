@@ -39,13 +39,16 @@ export default function Navbar() {
 
       {/* Mobile nav - toggles on hamburger click */}
       {isOpen && (
-        <nav className="flex flex-col gap-2 mt-4 sm:hidden">
-          {navigation.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+        <div className={`overflow-hidden transition-all duration-300 ease-in-out sm:hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+          }`}>
+          <nav className="flex flex-col gap-2 mt-4 sm:hidden">
+            {navigation.map((item) => (
+              <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
       )}
     </header>
   );
