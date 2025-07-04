@@ -15,6 +15,17 @@ body {
   transition: var(--transition);
 }
 
+::-webkit-scrollbar {
+  display: none;
+  background: #eee;
+}
+
+::-webkit-scrollbar-button {
+  width: 10px;
+  border-radius: 24px;
+  background-color: var(--foreground);
+}
+
 h1, h2, h2, h4, form, form>*{
   transition: var(--transition) !important;
 }
@@ -41,4 +52,8 @@ label {
 
 img {
   object-fit: cover;
+}
+
+.sidebar {
+  height: 35rem;
 }
