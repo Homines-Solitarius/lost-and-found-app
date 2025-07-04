@@ -12,7 +12,7 @@ interface ButtonProps {
   
 const Button = ({text, color, onClick, type} : ButtonProps) => {
   return (
-    <button style={{backgroundColor: color}} type={type} onClick={onClick}>{text}</button>
+    <button style={{backgroundColor: color}} type={type} onClick={onClick} className="font-bold p-2">{text}</button>
   )
 }
 
