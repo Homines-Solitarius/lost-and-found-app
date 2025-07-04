@@ -28,7 +28,7 @@ export default function Navbar() {
         </button>
 
         {/* Desktop nav - always visible on sm+ */}
-        <nav className="hidden sm:flex gap-6">
+        <nav className="hidden sm:flex gap-6 transition-all duration-300">
           {navigation.map((item) => (
             <Link key={item.name} href={item.href} className="text-md font-semibold px-6 py-2 rounded-md text-white hover:text-blue-700 hover:bg-white transition-colors duration-200">
               {item.name}
