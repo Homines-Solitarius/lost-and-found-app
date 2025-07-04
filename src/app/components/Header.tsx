@@ -43,7 +43,7 @@ export default function Navbar() {
           }`}>
           <nav className="flex flex-col gap-2 mt-4 sm:hidden transition-all duration-300 ease-in-out">
             {navigation.map((item) => (
-              <Link key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-200 hover:text-white">
+              <Link onClick={() => setIsOpen(!isOpen)} key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-200 hover:text-white">
                 {item.name}
               </Link>
             ))}
