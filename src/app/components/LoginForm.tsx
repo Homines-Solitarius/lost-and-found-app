@@ -17,7 +17,7 @@ const LoginForm = () => {
 
         //
         if (matricNumber == storedMatric && password == storedPassword) {
-            console.log("Login Successful");
+          alert("Login Successful");
         } else {
             alert('Invalid Credentials...')
             return;
