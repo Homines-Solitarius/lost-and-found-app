@@ -14,7 +14,7 @@ export default function Navbar() {
   ]
 
   return (
-    <header className="bg-blue-700 shadow-md sm:px-10 md:px-20 lg:px-40 px-6 py-4">
+    <header className="bg-blue-700 shadow-md sm:px-10 md:px-20 lg:px-4 px-6 py-4">
       <div className="flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">FPE Recover</h1>
 
