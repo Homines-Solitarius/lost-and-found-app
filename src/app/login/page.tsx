@@ -18,7 +18,7 @@ const Login = () => {
       <div className="flex justify-center w-full m-auto overflow-x-hidden transition-all duration-300 ease-in-out">
         {isAdmin ? <AdminLogin /> : <LoginForm/> }
       </div>
-      <button className="block ml-auto mr-5 mb-3 bg-gray-900 text-white font-bold p-2 rounded-md" onClick={SwitchForm}>{isAdmin ? "Login as Student" : "Login as admin"}</button>
+      <button className="block ml-auto mr-5 mb-3 bg-gray-900 text-white font-bold p-2 rounded-md transition-all duration-300 ease-in-out" onClick={SwitchForm}>{isAdmin ? "Login as Student" : "Login as admin"}</button>
       </>
   )
 }
