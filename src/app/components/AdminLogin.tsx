@@ -17,7 +17,7 @@ const AdminLogin = () => {
 
         //
         if (matricNumber == storedMatric && password == storedPassword) {
-            console.log("Login Successful");
+            location.href = '/dashboard/admin'
         } else {
             alert('Invalid Credentials...')
             return;
