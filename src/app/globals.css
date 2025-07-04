@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --transition: all 300ms ease-out;
 }
 
 body {
@@ -10,6 +12,11 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Poppins', sans-serif;
+  transition: var(--transition);
+}
+
+h1, h2, h2, h4, form, form>*{
+  transition: var(--transition) !important;
 }
 
 input,
