@@ -13,16 +13,16 @@ const reporters = [
 
 const Home = () => {
     return (
-        <>
+        < div className='overflow-x-hidden'>
             <div className='flex justify-between items-center mb-5 ransition-all duration-300ms ease-in-out'>
                 <h3 className='font-bold text-xl'>Quick Overview</h3>
-                <div className=''>
+                <div className='hidden md:block'>
                     <span>Welcome, admin</span>
                     <FaUserCheck size={30} />
                 </div>
             </div>
             {/* Cards */}
-            <div className='grid grid-cols-3 gap-8 mb-5'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-5'>
 
                 <div className="bg-red-500 text-white h-30 py-3 px-4 rounded-md  transition-all duration-300 shadow-md">
                     <h3 className="font-bold">Total Lost Items</h3>
@@ -43,7 +43,7 @@ const Home = () => {
             {/* Students who reported and matric number, plus item found */}
 
             <h3 className='font-bold text-xl my-5'>This Week</h3>
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {reporters.map((report) => (
                     <div key={report.id} className="bg-white h-fit mb-3 py-3 px-4 rounded-md transition-all duration-300 hover:shadow-md cursor-pointer">
                         <span className='flex'>
@@ -59,9 +59,9 @@ const Home = () => {
             {/*  */}
 
             <h3 className='font-bold text-xl my-5'>Last Week</h3>
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {reporters.map((report) => (
-                    <div key={report.id} className="bg-white h-fir mb-3 py-3 px-4 rounded-md transition-all duration-300 hover:shadow-md cursor-pointer">
+                    <div key={report.id} className="bg-white h-fit mb-3 py-3 px-4 rounded-md transition-all duration-300 hover:shadow-md cursor-pointer">
                         <span className='flex'>
                             <h3 className="text-md font-bold">{report.name}</h3>
                             <span className='text-white bg-red-500 w-5 h-6 text-center rounded-full font-bold ml-auto'>{(Math.random() * 7).toFixed(0)}</span>
@@ -71,7 +71,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 
