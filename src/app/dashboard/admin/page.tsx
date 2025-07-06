@@ -2,15 +2,17 @@
 
 import Button from '@/app/components/Button'
 import React, { useState } from 'react'
-import { FaBars, FaDoorOpen } from 'react-icons/fa'
 import Home from './Home'
 import Reports from './Reports'
 import Settings from './Settings'
+import { FaDoorOpen } from 'react-icons/fa6'
 
 const AdminDashboard = () => {
 
     const [isActive, setIsActive] = useState(false);
     const [isIndex, setIsIndex] = useState(1);
+
+
 
     const pages = [
         { id: 1, name: 'Overview', content: <Home/> },
@@ -24,8 +26,7 @@ const AdminDashboard = () => {
 
     return (
         <div className="flex flex-row w-full h-full transition-all duration-300ms ease-in-out">
-            <FaBars className='sm:hidden absolute w-10 mt-4 h-5'/>
-            <div className="hidden sm:block gap-6 transition-all duration-300 bg-blue-600 text-white w-60 h-140 overflow-y-hidden py-3 px-2 shadow-md">
+            {<div className="hidden sm:block gap-6 transition-all duration-300 bg-blue-600 text-white w-60 h-140 overflow-y-hidden py-3 px-2 shadow-md">
                 <h2 className='font-bold p-2 my-3 text-md bg-white text-black rounded-md'>My DashBoard</h2>
                 {pages.map((item) => (
                     <li onClick={() => {
@@ -39,7 +40,7 @@ const AdminDashboard = () => {
                     <FaDoorOpen size={20} />
                     <Button text='Logout' />
                 </span>
-            </div>
+            </div>}
             {/* Display */}
             <div className="bg-gray-200 w-full h-140 px-2 overflow-y-scroll">
                 <div className='m-3 ml-6 transition-all duration-300ms ease-in-out'>
