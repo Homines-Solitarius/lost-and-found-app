@@ -13,7 +13,7 @@ const reporters = [
 
 const Home = () => {
     return (
-        < div className='overflow-x-hidden'>
+        < div className='overflow-x-hidden px-2'>
             <div className='flex justify-between items-center mb-5 ransition-all duration-300ms ease-in-out'>
                 <h3 className='font-bold text-xl'>Quick Overview</h3>
                 <div className='hidden md:block'>
